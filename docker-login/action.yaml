@@ -35,6 +35,3 @@ runs:
         registry: ${{ inputs.REPO }}
         username: ${{ steps.secrets.outputs.USERNAME }}
         password: ${{ steps.secrets.outputs.PASSWORD }}
-    - name: docker pull 
-      run: 'docker pull bansodesatish/kubectl:latest'
-      shell: bash
