@@ -11,10 +11,13 @@ inputs:
     description: 'docker repository URL'
     required: true
   
-# outputs:
-#   random-number:
-#     description: "Random number"
-#     value: ${{ steps.random-number-generator.outputs.random-number }}
+outputs:
+  USERNAME:
+    description: "docker username"
+    value: ${{ steps.secrets.outputs.USERNAME }}
+  PASSWORD: 
+    description: "docker password"
+    value: ${{ steps.secrets.outputs.PASSWORD }}
 runs:
   using: "composite"
   steps:
