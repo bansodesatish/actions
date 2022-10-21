@@ -31,8 +31,8 @@ runs:
         roleId: ${{ inputs.VAULT_ROLE_ID }}
         secretId: ${{ inputs.VAULT_SECRET_ID }}
         secrets: |
-          kv/${{ env.DOCKER_REGISTRY }}/v2 username | USERNAME  ;
-          kv/${{ env.DOCKER_REGISTRY }}/v2 password | PASSWORD 
+          kv/${{ inputs.DOCKER_REGISTRY }}/v2 username | USERNAME  ;
+          kv/${{ inputs.DOCKER_REGISTRY }}/v2 password | PASSWORD 
     - name: docker login
       uses: docker/login-action@v2
       with:
